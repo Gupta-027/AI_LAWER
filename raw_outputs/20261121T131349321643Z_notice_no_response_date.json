@@ -1,0 +1,251 @@
+{
+  "case_id": "notice_no_response_date",
+  "purpose": "Debt allegation is not an admission; no response date is invented.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"
+      },
+      "output": "I will keep the sender's allegations separate from facts you accept. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 0.878,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "notice",
+        "goal": "Understand the notice and prepare questions for a qualified lawyer",
+        "facts": {
+          "summary": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "notice_text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "sender": "Riverstone Collections",
+          "requested_action": "We demand payment of the alleged balance.",
+          "response_date": "Not stated in the pasted notice"
+        },
+        "evidence": [],
+        "allegations": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "notice_quotes": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"
+          },
+          {
+            "role": "assistant",
+            "content": "I will keep the sender's allegations separate from facts you accept. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Lawyer review notes — review before sending any response\n\nSender: Riverstone Collections\nSender's allegations, not facts accepted by you:\n• I dispute the debt and have not accepted it.\n• You owe Rs 17000 for an unpaid service invoice.\n• We demand payment of the alleged balance.\n\nRequested action (quoted): We demand payment of the alleged balance.\nResponse date actually written: Not stated in the pasted notice\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+      "elapsed_ms": 0.011,
+      "state_before": {
+        "kind": "notice",
+        "goal": "Understand the notice and prepare questions for a qualified lawyer",
+        "facts": {
+          "summary": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "notice_text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "sender": "Riverstone Collections",
+          "requested_action": "We demand payment of the alleged balance.",
+          "response_date": "Not stated in the pasted notice"
+        },
+        "evidence": [],
+        "allegations": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "notice_quotes": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"
+          },
+          {
+            "role": "assistant",
+            "content": "I will keep the sender's allegations separate from facts you accept. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "notice",
+        "goal": "Understand the notice and prepare questions for a qualified lawyer",
+        "facts": {
+          "summary": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "notice_text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+          "sender": "Riverstone Collections",
+          "requested_action": "We demand payment of the alleged balance.",
+          "response_date": "Not stated in the pasted notice"
+        },
+        "evidence": [],
+        "allegations": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "notice_quotes": [
+          "I dispute the debt and have not accepted it.",
+          "You owe Rs 17000 for an unpaid service invoice.",
+          "We demand payment of the alleged balance."
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Lawyer review notes — review before sending any response\n\nSender: Riverstone Collections\nSender's allegations, not facts accepted by you:\n• I dispute the debt and have not accepted it.\n• You owe Rs 17000 for an unpaid service invoice.\n• We demand payment of the alleged balance.\n\nRequested action (quoted): We demand payment of the alleged balance.\nResponse date actually written: Not stated in the pasted notice\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Lawyer review notes — review before sending any response\n\nSender: Riverstone Collections\nSender's allegations, not facts accepted by you:\n• I dispute the debt and have not accepted it.\n• You owe Rs 17000 for an unpaid service invoice.\n• We demand payment of the alleged balance.\n\nRequested action (quoted): We demand payment of the alleged balance.\nResponse date actually written: Not stated in the pasted notice\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"
+          },
+          {
+            "role": "assistant",
+            "content": "I will keep the sender's allegations separate from facts you accept. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Get prompt review by a qualified lawyer, especially for court, police, criminal, eviction or hearing-related documents. The absence of a response date in the pasted text does not establish that no deadline applies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "notice",
+    "goal": "Understand the notice and prepare questions for a qualified lawyer",
+    "facts": {
+      "summary": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+      "notice_text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team",
+      "sender": "Riverstone Collections",
+      "requested_action": "We demand payment of the alleged balance.",
+      "response_date": "Not stated in the pasted notice"
+    },
+    "evidence": [],
+    "allegations": [
+      "I dispute the debt and have not accepted it.",
+      "You owe Rs 17000 for an unpaid service invoice.",
+      "We demand payment of the alleged balance."
+    ],
+    "notice_quotes": [
+      "I dispute the debt and have not accepted it.",
+      "You owe Rs 17000 for an unpaid service invoice.",
+      "We demand payment of the alleged balance."
+    ],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Lawyer review notes — review before sending any response\n\nSender: Riverstone Collections\nSender's allegations, not facts accepted by you:\n• I dispute the debt and have not accepted it.\n• You owe Rs 17000 for an unpaid service invoice.\n• We demand payment of the alleged balance.\n\nRequested action (quoted): We demand payment of the alleged balance.\nResponse date actually written: Not stated in the pasted notice\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Lawyer review notes — review before sending any response\n\nSender: Riverstone Collections\nSender's allegations, not facts accepted by you:\n• I dispute the debt and have not accepted it.\n• You owe Rs 17000 for an unpaid service invoice.\n• We demand payment of the alleged balance.\n\nRequested action (quoted): We demand payment of the alleged balance.\nResponse date actually written: Not stated in the pasted notice\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"
+      },
+      {
+        "role": "assistant",
+        "content": "I will keep the sender's allegations separate from facts you accept. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.935,
+  "run_id": "20261121T131349321643Z",
+  "recorded_at_utc": "2026-11-21T13:13:49.321643+00:00",
+  "requested_provider": "demo"
+}

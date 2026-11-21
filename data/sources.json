@@ -1,0 +1,84 @@
+{
+  "sources": [
+    {
+      "id": "nch",
+      "title": "National Consumer Helpline: About this portal",
+      "url": "https://consumerhelpline.gov.in/public/about",
+      "jurisdiction": "India; consumer grievances; pre-litigation assistance",
+      "checked_on": "2026-11-21",
+      "locator": "Questions 1, 3 and 8; retrieved text lines 21-27, 33-38 and 90-94",
+      "summary": "Official Department of Consumer Affairs explanation of NCH, complaint channels and the limits of its grievance process.",
+      "claims": [
+        {
+          "id": "nch_pre_litigation",
+          "text": "For a consumer grievance, the National Consumer Helpline offers a pre-litigation grievance process."
+        },
+        {
+          "id": "nch_register",
+          "text": "You can contact NCH on 1915 or register a grievance on its portal. Online filing requires one-time registration and allows supporting documents."
+        },
+        {
+          "id": "nch_no_guarantee",
+          "text": "NCH does not guarantee a remedy. If the grievance remains unresolved, a consumer may approach the appropriate Consumer Commission."
+        }
+      ]
+    },
+    {
+      "id": "nalsa_faq",
+      "title": "NALSA: Frequently asked questions",
+      "url": "https://nalsa.gov.in/faqs/",
+      "jurisdiction": "India; legal services institutions; eligibility and appropriate authority must be checked",
+      "checked_on": "2026-11-21",
+      "locator": "Questions 8, 11 and 12; retrieved text lines 192-220",
+      "summary": "Official routes to legal advice and legal-aid applications; the suitable institution depends on location and subject matter.",
+      "claims": [
+        {
+          "id": "nalsa_contact",
+          "text": "NALSA lists 15100 as its toll-free number for urgent legal assistance."
+        },
+        {
+          "id": "nalsa_application",
+          "text": "You may approach an appropriate legal services institution in person, by post, through its online process or by email. District Legal Services Authorities have front offices for applications."
+        },
+        {
+          "id": "nalsa_advice",
+          "text": "NALSA distinguishes court representation through legal aid from legal advice and assistance; its FAQ says advice and assistance can also be available to people outside legal-aid eligibility categories."
+        }
+      ]
+    },
+    {
+      "id": "nalsa_aid",
+      "title": "NALSA: Legal Aid",
+      "url": "https://nalsa.gov.in/legal-aid/",
+      "jurisdiction": "India; free legal aid subject to eligibility and assessment by the relevant institution",
+      "checked_on": "2026-11-21",
+      "locator": "Legal Services questions 2 and 4; Eligibility question 1; retrieved text lines 147-159 and 166-178",
+      "summary": "The official page describes services and eligibility. The prototype does not decide eligibility or quote a universal income threshold.",
+      "claims": [
+        {
+          "id": "nalsa_eligibility",
+          "text": "Free legal aid depends on eligibility and assessment of the case by the relevant Legal Services Authority. Income-based criteria can depend on the state and court."
+        },
+        {
+          "id": "nalsa_services",
+          "text": "Legal-aid services may include an advocate's representation, preparation of documents and certain proceeding-related expenses."
+        }
+      ]
+    },
+    {
+      "id": "consumer_acts",
+      "title": "Department of Consumer Affairs: Consumer Protection Act and Rules index",
+      "url": "https://consumeraffairs.gov.in/pages/consumer-protection-acts",
+      "jurisdiction": "India; legislation reference index only",
+      "checked_on": "2026-11-21",
+      "locator": "Consumer Protection Act heading and Rules made under Consumer Protection Act, 2019; retrieved text lines 126-164",
+      "summary": "An official legislation index. This index alone does not establish any customer's entitlement, refund deadline or compensation.",
+      "claims": [
+        {
+          "id": "consumer_official_text",
+          "text": "The Department of Consumer Affairs publishes links to the Consumer Protection Act, 2019 and related rules on its official legislation page."
+        }
+      ]
+    }
+  ]
+}

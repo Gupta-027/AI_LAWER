@@ -1,0 +1,203 @@
+{
+  "case_id": "unfamiliar_issue",
+  "purpose": "Issue outside verified workflow still gets organization and useful lawyer questions.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+      },
+      "output": "I have updated your case record.\n\nWhat outcome would you like help with?",
+      "elapsed_ms": 0.1,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "other",
+        "goal": "Organize the problem and prepare questions for a lawyer",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat outcome would you like help with?"
+          }
+        ],
+        "last_question": "What outcome would you like help with?",
+        "last_field": "goal",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer.\nYour goal: Organize the problem and prepare questions for a lawyer\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.",
+      "elapsed_ms": 0.007,
+      "state_before": {
+        "kind": "other",
+        "goal": "Organize the problem and prepare questions for a lawyer",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat outcome would you like help with?"
+          }
+        ],
+        "last_question": "What outcome would you like help with?",
+        "last_field": "goal",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "other",
+        "goal": "Organize the problem and prepare questions for a lawyer",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer.\nYour goal: Organize the problem and prepare questions for a lawyer\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer.\nYour goal: Organize the problem and prepare questions for a lawyer\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat outcome would you like help with?"
+          }
+        ],
+        "last_question": "What outcome would you like help with?",
+        "last_field": "goal",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Verified guidance for this issue is outside this prototype. Use the case summary and questions for a qualified lawyer.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "other",
+    "goal": "Organize the problem and prepare questions for a lawyer",
+    "facts": {
+      "summary": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer.\nYour goal: Organize the problem and prepare questions for a lawyer\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer.\nYour goal: Organize the problem and prepare questions for a lawyer\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nWhat outcome would you like help with?"
+      }
+    ],
+    "last_question": "What outcome would you like help with?",
+    "last_field": "goal",
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.146,
+  "run_id": "20261121T131739469529Z",
+  "recorded_at_utc": "2026-11-21T13:17:39.469529+00:00",
+  "requested_provider": "demo"
+}

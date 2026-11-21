@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+*.log
+.DS_Store
+.model-cache/
+.qa-chrome/
+.qa-edge/
+nyaya-saathi-submission.zip

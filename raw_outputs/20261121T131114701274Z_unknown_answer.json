@@ -1,0 +1,313 @@
+{
+  "case_id": "unknown_answer",
+  "purpose": "Accept uncertainty and move to a different question.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My landlord will not return the deposit. What can I do?"
+      },
+      "output": "I have updated your case record.\n\nHow much deposit did you pay?",
+      "elapsed_ms": 0.257,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "I don't know."
+      },
+      "output": "I have updated your case record.\n\nHave you moved out and returned the keys?",
+      "elapsed_ms": 0.011,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.008,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+        "draft_revision": 2,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "This prototype has not verified a law, deadline or entitlement for your agreement, state or employment arrangement. The draft is a factual request; ask a qualified lawyer about legal remedies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "Request the deposit balance or a written deduction statement",
+    "facts": {
+      "summary": "My landlord will not return the deposit. What can I do?"
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [
+      "deposit"
+    ],
+    "skipped_fields": [
+      "deposit"
+    ],
+    "revision": 2,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+    "draft_revision": 2,
+    "manually_edited": false,
+    "pending_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My landlord will not return the deposit. What can I do?"
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+      },
+      {
+        "role": "user",
+        "content": "I don't know."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+      }
+    ],
+    "last_question": "Have you moved out and returned the keys?",
+    "last_field": "moved_out",
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.329,
+  "run_id": "20261121T131114701274Z",
+  "recorded_at_utc": "2026-11-21T13:11:14.701274+00:00",
+  "requested_provider": "demo"
+}

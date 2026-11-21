@@ -1,0 +1,256 @@
+{
+  "case_id": "refund_pickup_only",
+  "purpose": "Return pickup does not establish refund approval or payment.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."
+      },
+      "output": "We’ll keep return pickup, refund approval and payment separate so the request reflects the actual status. Amount recorded from your account: ₹2499.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 1425.245,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "I want to ask the seller for the actual refund status.",
+        "facts": {
+          "summary": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.",
+          "amount": "₹2499",
+          "order_id": "QB-7841",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown",
+          "other_party": "QuickBasket",
+          "payment_status": "No refund has reached my bank."
+        },
+        "evidence": [
+          "receipt",
+          "order confirmation"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."
+          },
+          {
+            "role": "assistant",
+            "content": "We’ll keep return pickup, refund approval and payment separate so the request reflects the actual status. Amount recorded from your account: ₹2499.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\n  \"kind\": \"refund\",\n  \"goal\": \"I want to ask the seller for the actual refund status.\",\n  \"facts\": {\n    \"order_id\": \"QB-7841\",\n    \"other_party\": \"QuickBasket\",\n    \"payment_status\": \"No refund has reached my bank.\",\n    \"pickup_status\": \"Return pickup is confirmed\",\n    \"summary\": \"I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.\"\n  },\n  \"evidence\": [\n    \"I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.\"\n  ],\n  \"allegations\": [],\n  \"notice_quotes\": []\n}",
+      "model_usage": {
+        "promptTokenCount": 375,
+        "candidatesTokenCount": 233,
+        "totalTokenCount": 608
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Refund status clarification for order QB-7841\n\nDear QuickBasket,\n\nPlease clarify the refund status for order QB-7841, amount ₹2499. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: No refund has reached my bank.\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRecords you say you have: receipt, order confirmation\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.085,
+      "state_before": {
+        "kind": "refund",
+        "goal": "I want to ask the seller for the actual refund status.",
+        "facts": {
+          "summary": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.",
+          "amount": "₹2499",
+          "order_id": "QB-7841",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown",
+          "other_party": "QuickBasket",
+          "payment_status": "No refund has reached my bank."
+        },
+        "evidence": [
+          "receipt",
+          "order confirmation"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."
+          },
+          {
+            "role": "assistant",
+            "content": "We’ll keep return pickup, refund approval and payment separate so the request reflects the actual status. Amount recorded from your account: ₹2499.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "I want to ask the seller for the actual refund status.",
+        "facts": {
+          "summary": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.",
+          "amount": "₹2499",
+          "order_id": "QB-7841",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown",
+          "other_party": "QuickBasket",
+          "payment_status": "No refund has reached my bank."
+        },
+        "evidence": [
+          "receipt",
+          "order confirmation"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Refund status clarification for order QB-7841\n\nDear QuickBasket,\n\nPlease clarify the refund status for order QB-7841, amount ₹2499. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: No refund has reached my bank.\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRecords you say you have: receipt, order confirmation\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Refund status clarification for order QB-7841\n\nDear QuickBasket,\n\nPlease clarify the refund status for order QB-7841, amount ₹2499. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: No refund has reached my bank.\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRecords you say you have: receipt, order confirmation\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."
+          },
+          {
+            "role": "assistant",
+            "content": "We’ll keep return pickup, refund approval and payment separate so the request reflects the actual status. Amount recorded from your account: ₹2499.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": false,
+      "raw_model_text": null,
+      "model_usage": null,
+      "model_attempts": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "The National Consumer Helpline offers a pre-litigation route for consumer grievances.",
+      "source_id": "nch",
+      "claim_id": "nch_pre_litigation"
+    },
+    {
+      "text": "You can register a grievance through the National Consumer Helpline portal.",
+      "source_id": "nch",
+      "claim_id": "nch_register"
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "refund",
+    "goal": "I want to ask the seller for the actual refund status.",
+    "facts": {
+      "summary": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation.",
+      "amount": "₹2499",
+      "order_id": "QB-7841",
+      "pickup_status": "Pickup confirmed",
+      "approval_status": "Unknown",
+      "other_party": "QuickBasket",
+      "payment_status": "No refund has reached my bank."
+    },
+    "evidence": [
+      "receipt",
+      "order confirmation"
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Subject: Refund status clarification for order QB-7841\n\nDear QuickBasket,\n\nPlease clarify the refund status for order QB-7841, amount ₹2499. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: No refund has reached my bank.\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRecords you say you have: receipt, order confirmation\n\nRegards,\n[your name]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Refund status clarification for order QB-7841\n\nDear QuickBasket,\n\nPlease clarify the refund status for order QB-7841, amount ₹2499. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: No refund has reached my bank.\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRecords you say you have: receipt, order confirmation\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."
+      },
+      {
+        "role": "assistant",
+        "content": "We’ll keep return pickup, refund approval and payment separate so the request reflects the actual status. Amount recorded from your account: ₹2499.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 1425.426,
+  "run_id": "20261121T141432370456Z",
+  "recorded_at_utc": "2026-11-21T14:14:32.370456+00:00",
+  "requested_provider": "gemini"
+}

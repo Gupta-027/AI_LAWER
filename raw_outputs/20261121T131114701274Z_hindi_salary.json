@@ -1,0 +1,205 @@
+{
+  "case_id": "hindi_salary",
+  "purpose": "Devanagari input and independently chosen Hindi document language.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+      },
+      "output": "मैंने आपके मामले के तथ्य अपडेट कर दिए हैं।\n\nआपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?",
+      "elapsed_ms": 0.163,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "Hindi",
+        "document_language": "Hindi",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "Request payment and a written salary reconciliation",
+        "facts": {
+          "summary": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।",
+          "amount": "₹32000",
+          "periods": "अगस्त, सितंबर",
+          "prior_communication": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "Hindi",
+        "document_language": "Hindi",
+        "messages": [
+          {
+            "role": "user",
+            "content": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+          },
+          {
+            "role": "assistant",
+            "content": "मैंने आपके मामले के तथ्य अपडेट कर दिए हैं।\n\nआपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?"
+          }
+        ],
+        "last_question": "आपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "विषय: बकाया वेतन का मिलान और भुगतान अनुरोध\n\nप्रिय [प्राप्तकर्ता],\n\nमेरे रिकॉर्ड के अनुसार अगस्त, सितंबर का वेतन ₹32000 बकाया है। कृपया पेरोल रिकॉर्ड से राशि का मिलान करें और कोई अंतर हो तो बताएं।\nपहले किया गया संवाद: मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।\n\nकृपया भुगतान की स्थिति, किसी अंतर का कारण और प्रस्तावित भुगतान तारीख लिखकर बताएं।\n\nधन्यवाद,\n[आपका नाम]",
+      "elapsed_ms": 0.009,
+      "state_before": {
+        "kind": "salary",
+        "goal": "Request payment and a written salary reconciliation",
+        "facts": {
+          "summary": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।",
+          "amount": "₹32000",
+          "periods": "अगस्त, सितंबर",
+          "prior_communication": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "Hindi",
+        "document_language": "Hindi",
+        "messages": [
+          {
+            "role": "user",
+            "content": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+          },
+          {
+            "role": "assistant",
+            "content": "मैंने आपके मामले के तथ्य अपडेट कर दिए हैं।\n\nआपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?"
+          }
+        ],
+        "last_question": "आपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "Request payment and a written salary reconciliation",
+        "facts": {
+          "summary": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।",
+          "amount": "₹32000",
+          "periods": "अगस्त, सितंबर",
+          "prior_communication": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "विषय: बकाया वेतन का मिलान और भुगतान अनुरोध\n\nप्रिय [प्राप्तकर्ता],\n\nमेरे रिकॉर्ड के अनुसार अगस्त, सितंबर का वेतन ₹32000 बकाया है। कृपया पेरोल रिकॉर्ड से राशि का मिलान करें और कोई अंतर हो तो बताएं।\nपहले किया गया संवाद: मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।\n\nकृपया भुगतान की स्थिति, किसी अंतर का कारण और प्रस्तावित भुगतान तारीख लिखकर बताएं।\n\nधन्यवाद,\n[आपका नाम]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "conversation_language": "Hindi",
+        "document_language": "Hindi",
+        "messages": [
+          {
+            "role": "user",
+            "content": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+          },
+          {
+            "role": "assistant",
+            "content": "मैंने आपके मामले के तथ्य अपडेट कर दिए हैं।\n\nआपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?"
+          }
+        ],
+        "last_question": "आपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "अपने पत्राचार और उपलब्ध रिकॉर्ड की प्रतियां रखें। भेजने से पहले ड्राफ्ट जांचें; ऐप कुछ नहीं भेजता।",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "इस प्रोटोटाइप ने आपके समझौते, राज्य या रोजगार व्यवस्था के लिए कानून, समय सीमा या अधिकार सत्यापित नहीं किए हैं। ड्राफ्ट तथ्यों पर आधारित अनुरोध है; कानूनी उपाय वकील से पूछें।",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "कानूनी सहायता के बारे में पूछने के लिए राज्य या जिला विधिक सेवा प्राधिकरण से संपर्क कर सकते हैं।",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "salary",
+    "goal": "Request payment and a written salary reconciliation",
+    "facts": {
+      "summary": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।",
+      "amount": "₹32000",
+      "periods": "अगस्त, सितंबर",
+      "prior_communication": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "विषय: बकाया वेतन का मिलान और भुगतान अनुरोध\n\nप्रिय [प्राप्तकर्ता],\n\nमेरे रिकॉर्ड के अनुसार अगस्त, सितंबर का वेतन ₹32000 बकाया है। कृपया पेरोल रिकॉर्ड से राशि का मिलान करें और कोई अंतर हो तो बताएं।\nपहले किया गया संवाद: मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।\n\nकृपया भुगतान की स्थिति, किसी अंतर का कारण और प्रस्तावित भुगतान तारीख लिखकर बताएं।\n\nधन्यवाद,\n[आपका नाम]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "conversation_language": "Hindi",
+    "document_language": "Hindi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"
+      },
+      {
+        "role": "assistant",
+        "content": "मैंने आपके मामले के तथ्य अपडेट कर दिए हैं।\n\nआपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?"
+      }
+    ],
+    "last_question": "आपके पास कौन से रिकॉर्ड हैं, जैसे संदेश, रसीद या समझौता?",
+    "last_field": "evidence",
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.209,
+  "run_id": "20261121T131114701274Z",
+  "recorded_at_utc": "2026-11-21T13:11:14.701274+00:00",
+  "requested_provider": "demo"
+}

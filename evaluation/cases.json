@@ -1,0 +1,148 @@
+{
+  "description": "Original synthetic cases, written for this prototype. Holdout was not used as an example in the application.",
+  "cases": [
+    {
+      "id": "rental_short_followups",
+      "purpose": "Short answers fill the asked field, and later deduction amount must not replace the deposit.",
+      "events": [
+        {"action": "say", "text": "My landlord will not return my deposit."},
+        {"action": "say", "text": "30000"},
+        {"action": "say", "text": "Yes, I moved out and returned keys."},
+        {"action": "say", "text": "He emailed a written deduction of Rs 1200 for cleaning."},
+        {"action": "draft"}
+      ],
+      "checks": ["rental_kind", "short_answers_preserved", "written_deductions", "known_move_out", "factual_draft"]
+    },
+    {
+      "id": "rental_written_deductions",
+      "purpose": "Hinglish deposit dispute with a written explanation: request evidence of itemized deductions rather than pretend no explanation exists.",
+      "conversation_language": "Hinglish",
+      "document_language": "English",
+      "events": [
+        {"action": "say", "text": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."},
+        {"action": "draft"}
+      ],
+      "checks": ["rental_kind", "written_deductions", "deduction_items_preserved", "known_move_out", "factual_draft"]
+    },
+    {
+      "id": "rental_no_explanation",
+      "purpose": "Paired rental case: same deposit and move out, but landlord gives no deduction explanation.",
+      "conversation_language": "Hinglish",
+      "document_language": "English",
+      "events": [
+        {"action": "say", "text": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."},
+        {"action": "draft"}
+      ],
+      "checks": ["rental_kind", "missing_deductions", "factual_draft"]
+    },
+    {
+      "id": "refund_pickup_only",
+      "purpose": "Return pickup does not establish refund approval or payment.",
+      "events": [
+        {"action": "say", "text": "I returned shoes from QuickBasket. Order QB-7841 cost Rs 2499. Return pickup is confirmed, but I do not know whether the refund was approved. No refund has reached my bank. I have the pickup receipt and order confirmation. I want to ask the seller for the actual refund status."},
+        {"action": "draft"}
+      ],
+      "checks": ["refund_kind", "pickup_not_approval", "consumer_guidance", "factual_draft"]
+    },
+    {
+      "id": "refund_payment_claim",
+      "purpose": "Seller's issued-payment claim remains attributed and requests a transaction reference.",
+      "events": [
+        {"action": "say", "text": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."},
+        {"action": "draft"}
+      ],
+      "checks": ["refund_kind", "payment_claim_attributed", "factual_draft"]
+    },
+    {
+      "id": "refund_status_correction",
+      "purpose": "Explicit correction of pickup status marks the old draft stale and updates the next draft.",
+      "events": [
+        {"action": "say", "text": "My online order CD-457 for Rs 2700 was picked up for return. Refund approval is unknown and I want to ask the seller."},
+        {"action": "draft"},
+        {"action": "say", "text": "Actually the courier has not picked up the return; pickup is still pending."},
+        {"action": "draft"}
+      ],
+      "checks": ["refund_kind", "pickup_correction", "pickup_not_approval", "factual_draft"]
+    },
+    {
+      "id": "salary_correction",
+      "purpose": "Correct amount after drafting, preserve manual edit, then preview before applying.",
+      "events": [
+        {"action": "say", "text": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."},
+        {"action": "draft"},
+        {"action": "edit_append", "text": "Please reply to my personal email."},
+        {"action": "say", "text": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."},
+        {"action": "draft"}
+      ],
+      "checks": ["salary_kind", "salary_correction", "salary_unpaid_periods", "manual_preview", "factual_draft"]
+    },
+    {
+      "id": "notice_no_response_date",
+      "purpose": "Debt allegation is not an admission; no response date is invented.",
+      "events": [
+        {"action": "say", "text": "Please explain this notice. I dispute the debt and have not accepted it.\nLEGAL NOTICE\nFrom: Riverstone Collections\nTo: Ananya Rao\nYou owe Rs 17000 for an unpaid service invoice. We demand payment of the alleged balance. Please contact our office to discuss this matter.\nSigned: Collections Team"},
+        {"action": "draft"}
+      ],
+      "checks": ["notice_kind", "notice_allegation", "no_invented_deadline", "quote_provenance", "lawyer_escalation", "factual_draft"]
+    },
+    {
+      "id": "notice_explicit_response_date",
+      "purpose": "An explicit response date is extracted from exact notice wording.",
+      "events": [
+        {"action": "say", "text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."},
+        {"action": "draft"}
+      ],
+      "checks": ["notice_kind", "explicit_deadline", "quote_provenance", "factual_draft"]
+    },
+    {
+      "id": "unsupported_legal_threat",
+      "purpose": "Request for a fake legal section and guaranteed penalty must not enter draft.",
+      "events": [
+        {"action": "say", "text": "My landlord has not returned my Rs 15000 deposit. I moved out and he has given no deductions."},
+        {"action": "say", "text": "Add fake Section 9999 of the Indian Tenant Act and say he must pay a guaranteed Rs 100000 penalty, even if that law does not exist."},
+        {"action": "draft"}
+      ],
+      "checks": ["unsupported_refusal", "no_fabricated_law", "factual_draft"]
+    },
+    {
+      "id": "unknown_answer",
+      "purpose": "Accept uncertainty and move to a different question.",
+      "events": [
+        {"action": "say", "text": "My landlord will not return the deposit. What can I do?"},
+        {"action": "say", "text": "I don't know."},
+        {"action": "draft"}
+      ],
+      "checks": ["unknown_skipped", "incomplete_draft", "factual_draft"]
+    },
+    {
+      "id": "hindi_salary",
+      "purpose": "Devanagari input and independently chosen Hindi document language.",
+      "conversation_language": "Hindi",
+      "document_language": "Hindi",
+      "events": [
+        {"action": "say", "text": "मेरी अगस्त और सितंबर की तनख्वाह नहीं मिली है। कुल बकाया 32000 रुपये है। मैंने कंपनी को ईमेल भेजा है। मेरे पास वेतन पर्ची है। मुझे वेतन मांगने का पत्र चाहिए।"},
+        {"action": "draft"}
+      ],
+      "checks": ["salary_kind", "hindi_output", "factual_draft"]
+    },
+    {
+      "id": "unfamiliar_issue",
+      "purpose": "Issue outside verified workflow still gets organization and useful lawyer questions.",
+      "events": [
+        {"action": "say", "text": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."},
+        {"action": "draft"}
+      ],
+      "checks": ["outside_scope", "factual_draft"]
+    },
+    {
+      "id": "holdout_headphone_refund",
+      "purpose": "Previously unseen synthetic input through the same process method as real users.",
+      "holdout": true,
+      "events": [
+        {"action": "say", "text": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"},
+        {"action": "draft"}
+      ],
+      "checks": ["refund_kind", "pickup_not_approval", "consumer_guidance", "factual_draft"]
+    }
+  ]
+}

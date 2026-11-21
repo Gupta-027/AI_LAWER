@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: nyaya-saathi
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: python scripts/start_render.py
+    healthCheckPath: /_stcore/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NYAYA_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: STREAMLIT_SERVER_COOKIE_SECRET
+        generateValue: true

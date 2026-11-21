@@ -1,0 +1,235 @@
+{
+  "case_id": "unfamiliar_issue",
+  "purpose": "Issue outside verified workflow still gets organization and useful lawyer questions.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+      },
+      "output": "I can help organise your account and prepare questions for a qualified lawyer. This issue is outside the prototype’s verified guidance.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 1666.794,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "other",
+        "goal": "I want to know what facts to take to a lawyer.",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate.",
+          "goal_answered": "yes",
+          "prior_communication": "I have photographs and messages."
+        },
+        "evidence": [
+          "My neighbour blocks our shared driveway with a locked gate.",
+          "I have photographs and messages.",
+          "I want to know what facts to take to a lawyer."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I can help organise your account and prepare questions for a qualified lawyer. This issue is outside the prototype’s verified guidance.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": "{\"kind\": \"other\", \"goal\": \"I want to know what facts to take to a lawyer.\", \"facts\": {\"prior_communication\": \"I have photographs and messages.\", \"summary\": \"My neighbour blocks our shared driveway with a locked gate.\"}, \"evidence\": [\"My neighbour blocks our shared driveway with a locked gate.\", \"I have photographs and messages.\", \"I want to know what facts to take to a lawyer.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 338,
+        "candidatesTokenCount": 99,
+        "totalTokenCount": 437
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate.\nYour goal: I want to know what facts to take to a lawyer.\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.\n\nRecords you say you have: My neighbour blocks our shared driveway with a locked gate., I have photographs and messages., I want to know what facts to take to a lawyer.",
+      "elapsed_ms": 0.025,
+      "state_before": {
+        "kind": "other",
+        "goal": "I want to know what facts to take to a lawyer.",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate.",
+          "goal_answered": "yes",
+          "prior_communication": "I have photographs and messages."
+        },
+        "evidence": [
+          "My neighbour blocks our shared driveway with a locked gate.",
+          "I have photographs and messages.",
+          "I want to know what facts to take to a lawyer."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I can help organise your account and prepare questions for a qualified lawyer. This issue is outside the prototype’s verified guidance.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "other",
+        "goal": "I want to know what facts to take to a lawyer.",
+        "facts": {
+          "summary": "My neighbour blocks our shared driveway with a locked gate.",
+          "goal_answered": "yes",
+          "prior_communication": "I have photographs and messages."
+        },
+        "evidence": [
+          "My neighbour blocks our shared driveway with a locked gate.",
+          "I have photographs and messages.",
+          "I want to know what facts to take to a lawyer."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate.\nYour goal: I want to know what facts to take to a lawyer.\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.\n\nRecords you say you have: My neighbour blocks our shared driveway with a locked gate., I have photographs and messages., I want to know what facts to take to a lawyer.",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate.\nYour goal: I want to know what facts to take to a lawyer.\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.\n\nRecords you say you have: My neighbour blocks our shared driveway with a locked gate., I have photographs and messages., I want to know what facts to take to a lawyer.",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+          },
+          {
+            "role": "assistant",
+            "content": "I can help organise your account and prepare questions for a qualified lawyer. This issue is outside the prototype’s verified guidance.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": null,
+      "model_usage": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Verified guidance for this issue is outside this prototype. Use the case summary and questions for a qualified lawyer.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "other",
+    "goal": "I want to know what facts to take to a lawyer.",
+    "facts": {
+      "summary": "My neighbour blocks our shared driveway with a locked gate.",
+      "goal_answered": "yes",
+      "prior_communication": "I have photographs and messages."
+    },
+    "evidence": [
+      "My neighbour blocks our shared driveway with a locked gate.",
+      "I have photographs and messages.",
+      "I want to know what facts to take to a lawyer."
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate.\nYour goal: I want to know what facts to take to a lawyer.\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.\n\nRecords you say you have: My neighbour blocks our shared driveway with a locked gate., I have photographs and messages., I want to know what facts to take to a lawyer.",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Facts for a discussion with a qualified lawyer\n\nYour account: My neighbour blocks our shared driveway with a locked gate.\nYour goal: I want to know what facts to take to a lawyer.\n\nDetails to check: [parties, dates, amounts and available records]\n\nQuestions: Which options apply to these facts? Are there applicable time limits? What documents should I bring? This app has no verified issue-specific legal guidance for this problem.\n\nRecords you say you have: My neighbour blocks our shared driveway with a locked gate., I have photographs and messages., I want to know what facts to take to a lawyer.",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My neighbour blocks our shared driveway with a locked gate. I have photographs and messages. I want to know what facts to take to a lawyer."
+      },
+      {
+        "role": "assistant",
+        "content": "I can help organise your account and prepare questions for a qualified lawyer. This issue is outside the prototype’s verified guidance.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 1666.95,
+  "run_id": "20261121T140205149688Z",
+  "recorded_at_utc": "2026-11-21T14:02:05.149688+00:00",
+  "requested_provider": "gemini"
+}

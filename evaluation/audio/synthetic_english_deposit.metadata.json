@@ -1,0 +1,10 @@
+﻿{
+    "synthetic":  true,
+    "language":  "English",
+    "expected_text":  "My landlord has not returned my deposit of twelve thousand rupees. I have the receipt.",
+    "generator":  "Windows SAPI speech synthesis",
+    "voice":  "Microsoft David Desktop - English (United States)",
+    "audio_format":  "PCM WAV, 16 kHz, 16-bit, mono",
+    "provenance":  "Original test sentence, synthesized locally; no human recording or user case data.",
+    "rights_note":  "The installed voice is a Microsoft Windows component; no voice software is bundled."
+}

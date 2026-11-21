@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "fixture": "evaluation/audio/synthetic_hindi_deposit.wav",
+  "model": "gemini-3.5-flash-lite",
+  "result": {
+    "text": "मेरी मकान मालिक ने 12,000 की जमा राशि वापस नहीं की है, मेरे पास रसीद है।",
+    "language": "Hindi",
+    "status": "Transcript ready. Review names, dates and amounts before using it.",
+    "ok": true
+  },
+  "raw_model_text": "{\n  \"transcript\": \"मेरी मकान मालिक ने 12,000 की जमा राशि वापस नहीं की है, मेरे पास रसीद है।\",\n  \"language\": \"Hindi\",\n  \"is_speech\": true\n}",
+  "usage": {
+    "promptTokenCount": 303,
+    "candidatesTokenCount": 52,
+    "totalTokenCount": 355
+  },
+  "attempts": 1,
+  "elapsed_seconds": 2.794
+}

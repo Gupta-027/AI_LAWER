@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "fixture": "evaluation/audio/synthetic_english_deposit.wav",
+  "browser": "Headless Chrome with synthetic microphone and trusted text insertion; not a physical microphone test",
+  "transcript": "My landlord has not returned my deposit of 12,000 rupees. I have the receipt.",
+  "case_unchanged_before_confirmation": true,
+  "reviewed_text": "My landlord has not returned my deposit of Rs 12500. I have a receipt.",
+  "edited_amount_present": true,
+  "provider_badge": "AI connected",
+  "draft_contains_reviewed_amount": true
+}

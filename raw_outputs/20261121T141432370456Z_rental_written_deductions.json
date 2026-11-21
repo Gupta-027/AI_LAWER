@@ -1,0 +1,259 @@
+{
+  "case_id": "rental_written_deductions",
+  "purpose": "Hinglish deposit dispute with a written explanation: request evidence of itemized deductions rather than pretend no explanation exists.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+      },
+      "output": "Aapke deposit ke facts organise karke ek clear factual request taiyar karte hain. Aapke account se recorded amount: ₹30000.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein.",
+      "elapsed_ms": 2279.285,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Mujhe baki deposit chahiye.",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹5000, ₹2000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "location": "Bengaluru",
+          "prior_communication": "Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning."
+        },
+        "evidence": [
+          "WhatsApp messages",
+          "receipt",
+          "photographs"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Aapke deposit ke facts organise karke ek clear factual request taiyar karte hain. Aapke account se recorded amount: ₹30000.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\"kind\": \"rental\", \"goal\": \"Mujhe baki deposit chahiye.\", \"facts\": {\"deposit\": \"Rs 30000\", \"location\": \"Bengaluru\", \"moved_out\": \"5 October\", \"prior_communication\": \"Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning.\"}, \"evidence\": [\"Maine Bengaluru mein flat ka Rs 30000 deposit diya tha.\", \"Main 5 October ko move out kar chuka hoon.\", \"Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning.\", \"Mere paas deposit receipt aur checkout photos hain.\", \"Mujhe baki deposit chahiye.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 379,
+        "candidatesTokenCount": 171,
+        "totalTokenCount": 550
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹5000, ₹2000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: WhatsApp messages, receipt, photographs\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.193,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Mujhe baki deposit chahiye.",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹5000, ₹2000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "location": "Bengaluru",
+          "prior_communication": "Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning."
+        },
+        "evidence": [
+          "WhatsApp messages",
+          "receipt",
+          "photographs"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Aapke deposit ke facts organise karke ek clear factual request taiyar karte hain. Aapke account se recorded amount: ₹30000.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Mujhe baki deposit chahiye.",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹5000, ₹2000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "location": "Bengaluru",
+          "prior_communication": "Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning."
+        },
+        "evidence": [
+          "WhatsApp messages",
+          "receipt",
+          "photographs"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹5000, ₹2000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: WhatsApp messages, receipt, photographs\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹5000, ₹2000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: WhatsApp messages, receipt, photographs\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Aapke deposit ke facts organise karke ek clear factual request taiyar karte hain. Aapke account se recorded amount: ₹30000.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": false,
+      "raw_model_text": null,
+      "model_usage": null,
+      "model_attempts": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Correspondence aur apne records ki copy rakhein. Bhejne se pehle draft check karein; app kuch send nahi karta.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Is prototype ne aapke agreement, state ya employment arrangement ke liye law, deadline ya entitlement verify nahi kiya hai. Draft factual request hai; legal options qualified lawyer se poochein.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Legal aid ke baare mein State ya District Legal Services Authority se pooch sakte hain.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "Mujhe baki deposit chahiye.",
+    "facts": {
+      "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+      "deposit": "₹30000",
+      "deductions": "₹5000, ₹2000",
+      "moved_out": "Moved out / keys returned as described by user",
+      "deduction_explanation": "Written deductions provided",
+      "landlord_message": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+      "location": "Bengaluru",
+      "prior_communication": "Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning."
+    },
+    "evidence": [
+      "WhatsApp messages",
+      "receipt",
+      "photographs"
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹5000, ₹2000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: WhatsApp messages, receipt, photographs\n\nRegards,\n[your name]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹5000, ₹2000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: WhatsApp messages, receipt, photographs\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "Hinglish",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne WhatsApp par written deductions bheje: Rs 5000 painting aur Rs 2000 cleaning. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+      },
+      {
+        "role": "assistant",
+        "content": "Aapke deposit ke facts organise karke ek clear factual request taiyar karte hain. Aapke account se recorded amount: ₹30000.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 2279.623,
+  "run_id": "20261121T141432370456Z",
+  "recorded_at_utc": "2026-11-21T14:14:32.370456+00:00",
+  "requested_provider": "gemini"
+}

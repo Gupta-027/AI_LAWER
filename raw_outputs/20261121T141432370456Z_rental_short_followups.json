@@ -1,0 +1,649 @@
+{
+  "case_id": "rental_short_followups",
+  "purpose": "Short answers fill the asked field, and later deduction amount must not replace the deposit.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My landlord will not return my deposit."
+      },
+      "output": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?",
+      "elapsed_ms": 1398.223,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "My landlord will not return my deposit.",
+        "facts": {
+          "summary": "My landlord will not return my deposit."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\"kind\": \"rental\", \"goal\": \"My landlord will not return my deposit.\", \"facts\": {}, \"evidence\": [\"My landlord will not return my deposit.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 317,
+        "candidatesTokenCount": 46,
+        "totalTokenCount": 363
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "30000"
+      },
+      "output": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?",
+      "elapsed_ms": 1702.805,
+      "state_before": {
+        "kind": "rental",
+        "goal": "My landlord will not return my deposit.",
+        "facts": {
+          "summary": "My landlord will not return my deposit."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\n  \"kind\": \"rental\",\n  \"goal\": \"30000\",\n  \"facts\": {\n    \"deposit\": \"30000\",\n    \"summary\": \"My landlord will not return my deposit.\"\n  },\n  \"evidence\": [\n    \"My landlord will not return my deposit.\",\n    \"30000\"\n  ],\n  \"allegations\": [],\n  \"notice_quotes\": []\n}",
+      "model_usage": {
+        "promptTokenCount": 391,
+        "candidatesTokenCount": 102,
+        "totalTokenCount": 493
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "Yes, I moved out and returned keys."
+      },
+      "output": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?",
+      "elapsed_ms": 1568.92,
+      "state_before": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000",
+          "moved_out": "Moved out / keys returned as described by user"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 3,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+          }
+        ],
+        "last_question": "Has the landlord explained any deductions in writing?",
+        "last_field": "deduction_explanation",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\n  \"kind\": \"rental\",\n  \"goal\": \"My landlord will not return my deposit.\",\n  \"facts\": {\n    \"summary\": \"My landlord will not return my deposit.\",\n    \"user_account\": \"₹30000\",\n    \"user_name\": \"unknown\"\n  },\n  \"evidence\": [\n    \"My landlord will not return my deposit.\",\n    \"30000\",\n    \"Yes, I moved out and returned keys.\"\n  ],\n  \"allegations\": [],\n  \"notice_quotes\": []\n}",
+      "model_usage": {
+        "promptTokenCount": 480,
+        "candidatesTokenCount": 129,
+        "totalTokenCount": 609
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "He emailed a written deduction of Rs 1200 for cleaning."
+      },
+      "output": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 1707.238,
+      "state_before": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000",
+          "moved_out": "Moved out / keys returned as described by user"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 3,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+          }
+        ],
+        "last_question": "Has the landlord explained any deductions in writing?",
+        "last_field": "deduction_explanation",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning.",
+          "user_name": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [
+          "email correspondence"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\"kind\": \"rental\", \"goal\": \"My landlord will not return my deposit.\", \"facts\": {\"deposit\": \"30000\", \"moved_out\": \"Yes, I moved out and returned keys.\", \"summary\": \"My landlord will not return my deposit.\", \"user_account\": \"₹30000\", \"user_name\": \"He emailed a written deduction of Rs 1200 for cleaning.\"}, \"evidence\": [\"My landlord will not return my deposit.\", \"30000\", \"Yes, I moved out and returned keys.\", \"He emailed a written deduction of Rs 1200 for cleaning.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 587,
+        "candidatesTokenCount": 149,
+        "totalTokenCount": 736
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: email correspondence\n\nRegards,\nHe emailed a written deduction of Rs 1200 for cleaning.",
+      "elapsed_ms": 0.147,
+      "state_before": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning.",
+          "user_name": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [
+          "email correspondence"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "30000",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "₹30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning.",
+          "user_name": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [
+          "email correspondence"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: email correspondence\n\nRegards,\nHe emailed a written deduction of Rs 1200 for cleaning.",
+        "draft_revision": 4,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: email correspondence\n\nRegards,\nHe emailed a written deduction of Rs 1200 for cleaning.",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": false,
+      "raw_model_text": null,
+      "model_usage": null,
+      "model_attempts": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "This prototype has not verified a law, deadline or entitlement for your agreement, state or employment arrangement. The draft is a factual request; ask a qualified lawyer about legal remedies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "30000",
+    "facts": {
+      "summary": "My landlord will not return my deposit.",
+      "deposit": "₹30000",
+      "moved_out": "Moved out / keys returned as described by user",
+      "deductions": "₹1200",
+      "deduction_explanation": "Written deductions provided",
+      "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning.",
+      "user_name": "He emailed a written deduction of Rs 1200 for cleaning."
+    },
+    "evidence": [
+      "email correspondence"
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 4,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: email correspondence\n\nRegards,\nHe emailed a written deduction of Rs 1200 for cleaning.",
+    "draft_revision": 4,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: email correspondence\n\nRegards,\nHe emailed a written deduction of Rs 1200 for cleaning.",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My landlord will not return my deposit."
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+      },
+      {
+        "role": "user",
+        "content": "30000"
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHave you moved out and returned the keys?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, I moved out and returned keys."
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nHas the landlord explained any deductions in writing?"
+      },
+      {
+        "role": "user",
+        "content": "He emailed a written deduction of Rs 1200 for cleaning."
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise your deposit issue and prepare a clear factual request. Amount recorded from your account: ₹30000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 6377.722,
+  "run_id": "20261121T141432370456Z",
+  "recorded_at_utc": "2026-11-21T14:14:32.370456+00:00",
+  "requested_provider": "gemini"
+}

@@ -1,0 +1,6 @@
+# Optional CPU smoke test only; the Streamlit prototype does not require these.
+# Versions observed locally, not a general compatibility guarantee.
+torch>=2.6,<3
+transformers>=5,<6
+huggingface-hub>=1,<2
+safetensors>=0.4

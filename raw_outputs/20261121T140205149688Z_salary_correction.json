@@ -1,0 +1,574 @@
+{
+  "case_id": "salary_correction",
+  "purpose": "Correct amount after drafting, preserve manual edit, then preview before applying.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+      },
+      "output": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 10072.599,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": "{\n  \"kind\": \"salary\",\n  \"goal\": \"I want a factual salary request.\",\n  \"facts\": {\n    \"amount\": \"Rs 48000\",\n    \"periods\": \"August and September\",\n    \"prior_communication\": \"I emailed payroll on 4 October but received no reply.\"\n  },\n  \"evidence\": [\n    \"My employer has not paid my salary for August and September.\",\n    \"The total unpaid amount is Rs 48000.\",\n    \"I emailed payroll on 4 October but received no reply.\",\n    \"I have my employment letter and payslips.\"\n  ],\n  \"allegations\": [],\n  \"notice_quotes\": []\n}",
+      "model_usage": {
+        "promptTokenCount": 362,
+        "candidatesTokenCount": 160,
+        "totalTokenCount": 522
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.036,
+      "state_before": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": null,
+      "model_usage": null
+    },
+    {
+      "input": {
+        "action": "edit_append",
+        "text": "Please reply to my personal email."
+      },
+      "output": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+      "elapsed_ms": 0.011,
+      "state_before": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "draft_revision": 1,
+        "manually_edited": true,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": null,
+      "model_usage": null
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+      },
+      "output": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹42000. Your existing draft is now out of date; review a refreshed draft before using it.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 1841.828,
+      "state_before": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹48000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "draft_revision": 1,
+        "manually_edited": true,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹42000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips.",
+          "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "draft_revision": 1,
+        "manually_edited": true,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          },
+          {
+            "role": "user",
+            "content": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹42000. Your existing draft is now out of date; review a refreshed draft before using it.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": "{\"kind\": \"salary\", \"goal\": \"I want a factual salary request.\", \"facts\": {\"amount\": \"Rs 42000\", \"periods\": \"August and September\", \"prior_communication\": \"I emailed payroll on 4 October but received no reply.\"}, \"evidence\": [\"My employer has not paid my salary for August and September.\", \"The total unpaid amount is Rs 48000.\", \"I emailed payroll on 4 October but received no reply.\", \"Correction: the total unpaid amount is Rs 42000, not Rs 48000.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 649,
+        "candidatesTokenCount": 138,
+        "totalTokenCount": 787
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹42000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips., Correction: the total unpaid amount is Rs 42000, not Rs 48000.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+      "elapsed_ms": 11.125,
+      "state_before": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹42000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips.",
+          "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "draft_revision": 1,
+        "manually_edited": true,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          },
+          {
+            "role": "user",
+            "content": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹42000. Your existing draft is now out of date; review a refreshed draft before using it.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "salary",
+        "goal": "I want a factual salary request.",
+        "facts": {
+          "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+          "amount": "₹42000",
+          "periods": "August and September",
+          "prior_communication": "I emailed payroll on 4 October but received no reply."
+        },
+        "evidence": [
+          "payslips",
+          "My employer has not paid my salary for August and September.",
+          "The total unpaid amount is Rs 48000.",
+          "I emailed payroll on 4 October but received no reply.",
+          "I have my employment letter and payslips.",
+          "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "draft_revision": 1,
+        "manually_edited": true,
+        "pending_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹42000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips., Correction: the total unpaid amount is Rs 42000, not Rs 48000.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+        "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+        "pending_generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹42000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips., Correction: the total unpaid amount is Rs 42000, not Rs 48000.\n\nRegards,\n[your name]",
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          },
+          {
+            "role": "user",
+            "content": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹42000. Your existing draft is now out of date; review a refreshed draft before using it.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": null,
+      "model_usage": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "This prototype has not verified a law, deadline or entitlement for your agreement, state or employment arrangement. The draft is a factual request; ask a qualified lawyer about legal remedies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "salary",
+    "goal": "I want a factual salary request.",
+    "facts": {
+      "summary": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request.",
+      "amount": "₹42000",
+      "periods": "August and September",
+      "prior_communication": "I emailed payroll on 4 October but received no reply."
+    },
+    "evidence": [
+      "payslips",
+      "My employer has not paid my salary for August and September.",
+      "The total unpaid amount is Rs 48000.",
+      "I emailed payroll on 4 October but received no reply.",
+      "I have my employment letter and payslips.",
+      "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 2,
+    "draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+    "draft_revision": 1,
+    "manually_edited": true,
+    "pending_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹42000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips., Correction: the total unpaid amount is Rs 42000, not Rs 48000.\n\nRegards,\n[your name]\n\nPlease reply to my personal email.",
+    "generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹48000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips.\n\nRegards,\n[your name]",
+    "pending_generated_draft": "Subject: Request to reconcile and pay outstanding salary\n\nDear [recipient],\n\nAccording to my records, salary for August and September, totaling ₹42000, remains unpaid. Please reconcile this with payroll records and explain any difference.\nPrevious written communication: I emailed payroll on 4 October but received no reply.\n\nPlease confirm the payment status and proposed payment date in writing.\n\nRecords you say you have: payslips, My employer has not paid my salary for August and September., The total unpaid amount is Rs 48000., I emailed payroll on 4 October but received no reply., I have my employment letter and payslips., Correction: the total unpaid amount is Rs 42000, not Rs 48000.\n\nRegards,\n[your name]",
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My employer has not paid my salary for August and September. The total unpaid amount is Rs 48000. I emailed payroll on 4 October but received no reply. I have my employment letter and payslips. I want a factual salary request."
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹48000.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      },
+      {
+        "role": "user",
+        "content": "Correction: the total unpaid amount is Rs 42000, not Rs 48000."
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise the salary periods and amount you report as unpaid before preparing a request to your employer. Amount recorded from your account: ₹42000. Your existing draft is now out of date; review a refreshed draft before using it.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 11925.884,
+  "run_id": "20261121T140205149688Z",
+  "recorded_at_utc": "2026-11-21T14:02:05.149688+00:00",
+  "requested_provider": "gemini"
+}

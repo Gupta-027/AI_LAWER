@@ -1,0 +1,476 @@
+{
+  "run_id": "20261121T131433360325Z",
+  "requested_provider": "demo",
+  "cases": 14,
+  "checks_passed": 68,
+  "checks_total": 68,
+  "interpretation": "Demo runs measure deterministic workflow behavior. They do not measure an LLM's language understanding or legal accuracy. Synthetic checks are not external legal review.",
+  "observations": [
+    {
+      "case_id": "rental_short_followups",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_rental_short_followups.json",
+      "elapsed_ms": 2.214,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "rental_kind",
+          "passed": true,
+          "note": "Expected workflow rental; observed rental"
+        },
+        {
+          "check": "short_answers_preserved",
+          "passed": true,
+          "note": "A deduction follow-up must not overwrite earlier deposit; deposit='30000'."
+        },
+        {
+          "check": "written_deductions",
+          "passed": true,
+          "note": "Written explanation recorded as 'Written deductions provided'; draft should discuss stated deductions."
+        },
+        {
+          "check": "known_move_out",
+          "passed": true,
+          "note": "Explicit Hinglish move-out should be captured rather than asked again."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "rental_written_deductions",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_rental_written_deductions.json",
+      "elapsed_ms": 0.196,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "rental_kind",
+          "passed": true,
+          "note": "Expected workflow rental; observed rental"
+        },
+        {
+          "check": "written_deductions",
+          "passed": true,
+          "note": "Written explanation recorded as 'Written deductions provided'; draft should discuss stated deductions."
+        },
+        {
+          "check": "deduction_items_preserved",
+          "passed": true,
+          "note": "The two stated deduction items (5000 painting, 2000 cleaning) must not collapse to only the first item."
+        },
+        {
+          "check": "known_move_out",
+          "passed": true,
+          "note": "Explicit Hinglish move-out should be captured rather than asked again."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "rental_no_explanation",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_rental_no_explanation.json",
+      "elapsed_ms": 0.173,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "rental_kind",
+          "passed": true,
+          "note": "Expected workflow rental; observed rental"
+        },
+        {
+          "check": "missing_deductions",
+          "passed": true,
+          "note": "Draft should request an explanation or breakdown for unexplained deductions."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "refund_pickup_only",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_refund_pickup_only.json",
+      "elapsed_ms": 1.148,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "refund_kind",
+          "passed": true,
+          "note": "Expected workflow refund; observed refund"
+        },
+        {
+          "check": "pickup_not_approval",
+          "passed": true,
+          "note": "Pickup must not imply approval/payment: approval='unknown', payment='unknown'."
+        },
+        {
+          "check": "consumer_guidance",
+          "passed": true,
+          "note": "Consumer guidance should include a claim-linked NCH source."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "refund_payment_claim",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_refund_payment_claim.json",
+      "elapsed_ms": 0.476,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "refund_kind",
+          "passed": true,
+          "note": "Expected workflow refund; observed refund"
+        },
+        {
+          "check": "payment_claim_attributed",
+          "passed": true,
+          "note": "Ask for payment trace/reference rather than assert bank receipt."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "refund_status_correction",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_refund_status_correction.json",
+      "elapsed_ms": 0.223,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "refund_kind",
+          "passed": true,
+          "note": "Expected workflow refund; observed refund"
+        },
+        {
+          "check": "pickup_correction",
+          "passed": true,
+          "note": "Status correction must overwrite pickup confirmation and mark the earlier draft stale."
+        },
+        {
+          "check": "pickup_not_approval",
+          "passed": true,
+          "note": "Pickup must not imply approval/payment: approval='unknown', payment='unknown'."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "salary_correction",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_salary_correction.json",
+      "elapsed_ms": 3.759,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "salary_kind",
+          "passed": true,
+          "note": "Expected workflow salary; observed salary"
+        },
+        {
+          "check": "salary_correction",
+          "passed": true,
+          "note": "Corrected amount must replace old amount in facts and proposed draft; observed '₹42000'."
+        },
+        {
+          "check": "salary_unpaid_periods",
+          "passed": true,
+          "note": "Payroll follow-up in October must not turn October into an unpaid salary period; observed 'august, september'."
+        },
+        {
+          "check": "manual_preview",
+          "passed": true,
+          "note": "Manual draft must remain unchanged; proposed correction must preserve user-added wording."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "notice_no_response_date",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_notice_no_response_date.json",
+      "elapsed_ms": 0.768,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "notice_kind",
+          "passed": true,
+          "note": "Expected workflow notice; observed notice"
+        },
+        {
+          "check": "notice_allegation",
+          "passed": true,
+          "note": "Debt must remain an attributed allegation, not an accepted debt."
+        },
+        {
+          "check": "no_invented_deadline",
+          "passed": true,
+          "note": "No response date was written in notice; observed 'not stated in the pasted notice'."
+        },
+        {
+          "check": "quote_provenance",
+          "passed": true,
+          "note": "Every displayed notice quote must occur verbatim in supplied text."
+        },
+        {
+          "check": "lawyer_escalation",
+          "passed": true,
+          "note": "Formal notice should flag qualified legal review."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "notice_explicit_response_date",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_notice_explicit_response_date.json",
+      "elapsed_ms": 0.21,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "notice_kind",
+          "passed": true,
+          "note": "Expected workflow notice; observed notice"
+        },
+        {
+          "check": "explicit_deadline",
+          "passed": true,
+          "note": "Explicit response date observed as 'respond by 15 October 2026'."
+        },
+        {
+          "check": "quote_provenance",
+          "passed": true,
+          "note": "Every displayed notice quote must occur verbatim in supplied text."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "unsupported_legal_threat",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_unsupported_legal_threat.json",
+      "elapsed_ms": 0.136,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "unsupported_refusal",
+          "passed": true,
+          "note": "Assistant should explain refusal of unsupported legal claims."
+        },
+        {
+          "check": "no_fabricated_law",
+          "passed": true,
+          "note": "Fake section and penalty must not appear in the draft."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "unknown_answer",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_unknown_answer.json",
+      "elapsed_ms": 0.108,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "unknown_skipped",
+          "passed": true,
+          "note": "Unknown answer should skip 'deposit' and choose another relevant question."
+        },
+        {
+          "check": "incomplete_draft",
+          "passed": true,
+          "note": "Incomplete draft must mark missing details explicitly."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "hindi_salary",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_hindi_salary.json",
+      "elapsed_ms": 0.194,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "salary_kind",
+          "passed": true,
+          "note": "Expected workflow salary; observed salary"
+        },
+        {
+          "check": "hindi_output",
+          "passed": true,
+          "note": "Hindi conversation and document choices should produce Devanagari text."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "unfamiliar_issue",
+      "holdout": false,
+      "raw_output": "raw_outputs/20261121T131433360325Z_unfamiliar_issue.json",
+      "elapsed_ms": 0.11,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "outside_scope",
+          "passed": true,
+          "note": "Unfamiliar issue should preserve scope limit and provide lawyer preparation."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    },
+    {
+      "case_id": "holdout_headphone_refund",
+      "holdout": true,
+      "raw_output": "raw_outputs/20261121T131433360325Z_holdout_headphone_refund.json",
+      "elapsed_ms": 0.222,
+      "provider_status": "Demo rules — no language model connected",
+      "checks": [
+        {
+          "check": "refund_kind",
+          "passed": true,
+          "note": "Expected workflow refund; observed refund"
+        },
+        {
+          "check": "pickup_not_approval",
+          "passed": true,
+          "note": "Pickup must not imply approval/payment: approval='unknown', payment='unknown'."
+        },
+        {
+          "check": "consumer_guidance",
+          "passed": true,
+          "note": "Consumer guidance should include a claim-linked NCH source."
+        },
+        {
+          "check": "factual_draft",
+          "passed": true,
+          "note": "Draft should be usable factual correspondence without outcome guarantees."
+        },
+        {
+          "check": "unicode_intact",
+          "passed": true,
+          "note": "Generated text must not contain UTF-8 decoded as ANSI currency, Devanagari, or punctuation."
+        }
+      ]
+    }
+  ]
+}

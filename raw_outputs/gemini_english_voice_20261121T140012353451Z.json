@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "fixture": "evaluation/audio/synthetic_english_deposit.wav",
+  "model": "gemini-3.5-flash-lite",
+  "result": {
+    "text": "My landlord has not returned my deposit of 12000 rupees. I have the receipt.",
+    "language": "English",
+    "status": "Transcript ready. Review names, dates and amounts before using it.",
+    "ok": true
+  },
+  "raw_model_text": "{\n  \"transcript\": \"My landlord has not returned my deposit of 12000 rupees. I have the receipt.\",\n  \"language\": \"English\",\n  \"is_speech\": true\n}",
+  "usage": {
+    "promptTokenCount": 298,
+    "candidatesTokenCount": 46,
+    "totalTokenCount": 344
+  },
+  "elapsed_seconds": 3.01
+}

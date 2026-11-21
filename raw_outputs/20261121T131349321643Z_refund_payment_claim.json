@@ -1,0 +1,228 @@
+{
+  "case_id": "refund_payment_claim",
+  "purpose": "Seller's issued-payment claim remains attributed and requests a transaction reference.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."
+      },
+      "output": "I have updated your case record.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 0.356,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference.",
+          "amount": "₹1800",
+          "order_id": "AB-91",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Refund approved according to user",
+          "payment_status": "Seller says refund issued; receipt not independently verified"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Refund status clarification for order AB-91\n\nDear [recipient],\n\nPlease clarify the refund status for order AB-91, amount ₹1800. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: Refund approved according to user\nRefund payment: Seller says refund issued; receipt not independently verified\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.01,
+      "state_before": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference.",
+          "amount": "₹1800",
+          "order_id": "AB-91",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Refund approved according to user",
+          "payment_status": "Seller says refund issued; receipt not independently verified"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference.",
+          "amount": "₹1800",
+          "order_id": "AB-91",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Refund approved according to user",
+          "payment_status": "Seller says refund issued; receipt not independently verified"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Refund status clarification for order AB-91\n\nDear [recipient],\n\nPlease clarify the refund status for order AB-91, amount ₹1800. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: Refund approved according to user\nRefund payment: Seller says refund issued; receipt not independently verified\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Refund status clarification for order AB-91\n\nDear [recipient],\n\nPlease clarify the refund status for order AB-91, amount ₹1800. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: Refund approved according to user\nRefund payment: Seller says refund issued; receipt not independently verified\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "The National Consumer Helpline offers a pre-litigation route for consumer grievances.",
+      "source_id": "nch",
+      "claim_id": "nch_pre_litigation"
+    },
+    {
+      "text": "You can register a grievance through the National Consumer Helpline portal.",
+      "source_id": "nch",
+      "claim_id": "nch_register"
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "refund",
+    "goal": "Clarify the refund status and request resolution",
+    "facts": {
+      "summary": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference.",
+      "amount": "₹1800",
+      "order_id": "AB-91",
+      "pickup_status": "Pickup confirmed",
+      "approval_status": "Refund approved according to user",
+      "payment_status": "Seller says refund issued; receipt not independently verified"
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Subject: Refund status clarification for order AB-91\n\nDear [recipient],\n\nPlease clarify the refund status for order AB-91, amount ₹1800. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: Refund approved according to user\nRefund payment: Seller says refund issued; receipt not independently verified\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Refund status clarification for order AB-91\n\nDear [recipient],\n\nPlease clarify the refund status for order AB-91, amount ₹1800. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: Refund approved according to user\nRefund payment: Seller says refund issued; receipt not independently verified\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My online order AB-91 for Rs 1800 was returned. Pickup was completed and the refund was approved. The seller says the refund payment was issued on 12 October, but my bank account has not received it. I have their email. Please help me ask for a transaction reference."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.406,
+  "run_id": "20261121T131349321643Z",
+  "recorded_at_utc": "2026-11-21T13:13:49.321643+00:00",
+  "requested_provider": "demo"
+}

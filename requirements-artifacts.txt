@@ -1,0 +1,4 @@
+# Optional assignment PDF generation; not installed on the hosted web service.
+-r requirements.txt
+reportlab==5.0.0
+pypdf==6.14.2

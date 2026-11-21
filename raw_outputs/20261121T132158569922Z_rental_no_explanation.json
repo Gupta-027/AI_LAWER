@@ -1,0 +1,227 @@
+{
+  "case_id": "rental_no_explanation",
+  "purpose": "Paired rental case: same deposit and move out, but landlord gives no deduction explanation.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+      },
+      "output": "Maine aapke case ke facts update kar diye hain.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein.",
+      "elapsed_ms": 0.15,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹7000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "No explanation provided"
+        },
+        "evidence": [
+          "receipt"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Maine aapke case ke facts update kar diye hain.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Deductions mentioned: ₹7000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: receipt\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.011,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹7000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "No explanation provided"
+        },
+        "evidence": [
+          "receipt"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Maine aapke case ke facts update kar diye hain.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+          "deposit": "₹30000",
+          "deductions": "₹7000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deduction_explanation": "No explanation provided"
+        },
+        "evidence": [
+          "receipt"
+        ],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Deductions mentioned: ₹7000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: receipt\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Deductions mentioned: ₹7000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: receipt\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "Hinglish",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+          },
+          {
+            "role": "assistant",
+            "content": "Maine aapke case ke facts update kar diye hain.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Correspondence aur apne records ki copy rakhein. Bhejne se pehle draft check karein; app kuch send nahi karta.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Is prototype ne aapke agreement, state ya employment arrangement ke liye law, deadline ya entitlement verify nahi kiya hai. Draft factual request hai; legal options qualified lawyer se poochein.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Legal aid ke baare mein State ya District Legal Services Authority se pooch sakte hain.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "Request the deposit balance or a written deduction statement",
+    "facts": {
+      "summary": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye.",
+      "deposit": "₹30000",
+      "deductions": "₹7000",
+      "moved_out": "Moved out / keys returned as described by user",
+      "deduction_explanation": "No explanation provided"
+    },
+    "evidence": [
+      "receipt"
+    ],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Deductions mentioned: ₹7000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: receipt\n\nRegards,\n[your name]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of ₹30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Deductions mentioned: ₹7000. Please also confirm the proposed date for returning the balance.\n\nRecords you say you have: receipt\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "Hinglish",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Maine Bengaluru mein flat ka Rs 30000 deposit diya tha. Main 5 October ko move out kar chuka hoon. Landlord ne Rs 7000 kaat liye lekin koi explanation ya written deductions nahi diye. Mere paas deposit receipt aur checkout photos hain. Mujhe baki deposit chahiye."
+      },
+      {
+        "role": "assistant",
+        "content": "Maine aapke case ke facts update kar diye hain.\n\nAb factual draft bana sakte hain. Missing details brackets mein hongi; bhejne se pehle review karein."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.195,
+  "run_id": "20261121T132158569922Z",
+  "recorded_at_utc": "2026-11-21T13:21:58.569922+00:00",
+  "requested_provider": "demo"
+}

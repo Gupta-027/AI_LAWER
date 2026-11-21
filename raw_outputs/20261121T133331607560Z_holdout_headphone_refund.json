@@ -1,0 +1,220 @@
+{
+  "case_id": "holdout_headphone_refund",
+  "purpose": "Previously unseen synthetic input through the same process method as real users.",
+  "synthetic": true,
+  "holdout": true,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"
+      },
+      "output": "I have updated your case record.\n\nHas the seller said the refund payment was issued?",
+      "elapsed_ms": 0.302,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?",
+          "amount": "₹3799",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the seller said the refund payment was issued?"
+          }
+        ],
+        "last_question": "Has the seller said the refund payment was issued?",
+        "last_field": "payment_status",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Refund status clarification for order [order number]\n\nDear [recipient],\n\nPlease clarify the refund status for order [order number], amount ₹3799. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: [status not known]\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.012,
+      "state_before": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?",
+          "amount": "₹3799",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the seller said the refund payment was issued?"
+          }
+        ],
+        "last_question": "Has the seller said the refund payment was issued?",
+        "last_field": "payment_status",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "refund",
+        "goal": "Clarify the refund status and request resolution",
+        "facts": {
+          "summary": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?",
+          "amount": "₹3799",
+          "pickup_status": "Pickup confirmed",
+          "approval_status": "Unknown"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Subject: Refund status clarification for order [order number]\n\nDear [recipient],\n\nPlease clarify the refund status for order [order number], amount ₹3799. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: [status not known]\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Refund status clarification for order [order number]\n\nDear [recipient],\n\nPlease clarify the refund status for order [order number], amount ₹3799. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: [status not known]\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the seller said the refund payment was issued?"
+          }
+        ],
+        "last_question": "Has the seller said the refund payment was issued?",
+        "last_field": "payment_status",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "The National Consumer Helpline offers a pre-litigation route for consumer grievances.",
+      "source_id": "nch",
+      "claim_id": "nch_pre_litigation"
+    },
+    {
+      "text": "You can register a grievance through the National Consumer Helpline portal.",
+      "source_id": "nch",
+      "claim_id": "nch_register"
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "refund",
+    "goal": "Clarify the refund status and request resolution",
+    "facts": {
+      "summary": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?",
+      "amount": "₹3799",
+      "pickup_status": "Pickup confirmed",
+      "approval_status": "Unknown"
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Subject: Refund status clarification for order [order number]\n\nDear [recipient],\n\nPlease clarify the refund status for order [order number], amount ₹3799. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: [status not known]\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Refund status clarification for order [order number]\n\nDear [recipient],\n\nPlease clarify the refund status for order [order number], amount ₹3799. My current records are:\nReturn pickup: Pickup confirmed\nRefund approval: [status not known]\nRefund payment: [status not known]\n\nPlease confirm whether the refund has been approved and explain the next step. If payment has been issued, please share the issue date and transaction reference so I can reconcile my records.\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I bought wireless headphones online for Rs 3799. The courier collected them yesterday after a return request. The shop hasn't told me if it accepted the return or approved a refund. I have a courier pickup SMS. What should I ask the shop now?"
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHas the seller said the refund payment was issued?"
+      }
+    ],
+    "last_question": "Has the seller said the refund payment was issued?",
+    "last_field": "payment_status",
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 0.356,
+  "run_id": "20261121T133331607560Z",
+  "recorded_at_utc": "2026-11-21T13:33:31.607560+00:00",
+  "requested_provider": "demo"
+}

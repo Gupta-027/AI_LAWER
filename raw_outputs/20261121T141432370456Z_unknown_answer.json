@@ -1,0 +1,343 @@
+{
+  "case_id": "unknown_answer",
+  "purpose": "Accept uncertainty and move to a different question.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My landlord will not return the deposit. What can I do?"
+      },
+      "output": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?",
+      "elapsed_ms": 1695.653,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "My landlord will not return the deposit. What can I do?",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": true,
+      "raw_model_text": "{\"kind\": \"rental\", \"goal\": \"My landlord will not return the deposit. What can I do?\", \"facts\": {}, \"evidence\": [\"My landlord will not return the deposit.\"], \"allegations\": [], \"notice_quotes\": []}",
+      "model_usage": {
+        "promptTokenCount": 322,
+        "candidatesTokenCount": 51,
+        "totalTokenCount": 373
+      },
+      "model_attempts": 1
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "I don't know."
+      },
+      "output": "That’s okay. I’ll leave that detail unknown and work with what you do know.\n\nHave you moved out and returned the keys?",
+      "elapsed_ms": 0.017,
+      "state_before": {
+        "kind": "rental",
+        "goal": "My landlord will not return the deposit. What can I do?",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "My landlord will not return the deposit. What can I do?",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "That’s okay. I’ll leave that detail unknown and work with what you do know.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": false,
+      "raw_model_text": null,
+      "model_usage": null,
+      "model_attempts": null
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.012,
+      "state_before": {
+        "kind": "rental",
+        "goal": "My landlord will not return the deposit. What can I do?",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "That’s okay. I’ll leave that detail unknown and work with what you do know.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "My landlord will not return the deposit. What can I do?",
+        "facts": {
+          "summary": "My landlord will not return the deposit. What can I do?"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [
+          "deposit"
+        ],
+        "skipped_fields": [
+          "deposit"
+        ],
+        "revision": 2,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+        "draft_revision": 2,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return the deposit. What can I do?"
+          },
+          {
+            "role": "assistant",
+            "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "I don't know."
+          },
+          {
+            "role": "assistant",
+            "content": "That’s okay. I’ll leave that detail unknown and work with what you do know.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "model_called": false,
+      "raw_model_text": null,
+      "model_usage": null,
+      "model_attempts": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "This prototype has not verified a law, deadline or entitlement for your agreement, state or employment arrangement. The draft is a factual request; ask a qualified lawyer about legal remedies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "My landlord will not return the deposit. What can I do?",
+    "facts": {
+      "summary": "My landlord will not return the deposit. What can I do?"
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [
+      "deposit"
+    ],
+    "skipped_fields": [
+      "deposit"
+    ],
+    "revision": 2,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+    "draft_revision": 2,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of [deposit amount]. Move-out/key-return status: [move-out and key-return status].\n\nPlease confirm the status of my deposit return. If you propose any deductions, please provide an itemized written statement showing each amount and its basis. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My landlord will not return the deposit. What can I do?"
+      },
+      {
+        "role": "assistant",
+        "content": "Let’s organise your deposit issue and prepare a clear factual request.\n\nHow much deposit did you pay?"
+      },
+      {
+        "role": "user",
+        "content": "I don't know."
+      },
+      {
+        "role": "assistant",
+        "content": "That’s okay. I’ll leave that detail unknown and work with what you do know.\n\nHave you moved out and returned the keys?"
+      }
+    ],
+    "last_question": "Have you moved out and returned the keys?",
+    "last_field": "moved_out",
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 1695.78,
+  "run_id": "20261121T141432370456Z",
+  "recorded_at_utc": "2026-11-21T14:14:32.370456+00:00",
+  "requested_provider": "gemini"
+}

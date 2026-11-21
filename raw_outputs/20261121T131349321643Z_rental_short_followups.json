@@ -1,0 +1,601 @@
+{
+  "case_id": "rental_short_followups",
+  "purpose": "Short answers fill the asked field, and later deduction amount must not replace the deposit.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "My landlord will not return my deposit."
+      },
+      "output": "I have updated your case record.\n\nHow much deposit did you pay?",
+      "elapsed_ms": 1.63,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "30000"
+      },
+      "output": "I have updated your case record.\n\nHave you moved out and returned the keys?",
+      "elapsed_ms": 0.27,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          }
+        ],
+        "last_question": "How much deposit did you pay?",
+        "last_field": "deposit",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "Yes, I moved out and returned keys."
+      },
+      "output": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?",
+      "elapsed_ms": 0.045,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 2,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          }
+        ],
+        "last_question": "Have you moved out and returned the keys?",
+        "last_field": "moved_out",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000",
+          "moved_out": "Moved out / keys returned as described by user"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 3,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+          }
+        ],
+        "last_question": "Has the landlord explained any deductions in writing?",
+        "last_field": "deduction_explanation",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "say",
+        "text": "He emailed a written deduction of Rs 1200 for cleaning."
+      },
+      "output": "I have updated your case record.\n\nWhat records do you have, such as messages, receipts or an agreement?",
+      "elapsed_ms": 0.233,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000",
+          "moved_out": "Moved out / keys returned as described by user"
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 3,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+          }
+        ],
+        "last_question": "Has the landlord explained any deductions in writing?",
+        "last_field": "deduction_explanation",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat records do you have, such as messages, receipts or an agreement?"
+          }
+        ],
+        "last_question": "What records do you have, such as messages, receipts or an agreement?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of 30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+      "elapsed_ms": 0.026,
+      "state_before": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat records do you have, such as messages, receipts or an agreement?"
+          }
+        ],
+        "last_question": "What records do you have, such as messages, receipts or an agreement?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "rental",
+        "goal": "Request the deposit balance or a written deduction statement",
+        "facts": {
+          "summary": "My landlord will not return my deposit.",
+          "deposit": "30000",
+          "moved_out": "Moved out / keys returned as described by user",
+          "deductions": "₹1200",
+          "deduction_explanation": "Written deductions provided",
+          "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning."
+        },
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 4,
+        "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of 30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+        "draft_revision": 4,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of 30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "My landlord will not return my deposit."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+          },
+          {
+            "role": "user",
+            "content": "30000"
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+          },
+          {
+            "role": "user",
+            "content": "Yes, I moved out and returned keys."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+          },
+          {
+            "role": "user",
+            "content": "He emailed a written deduction of Rs 1200 for cleaning."
+          },
+          {
+            "role": "assistant",
+            "content": "I have updated your case record.\n\nWhat records do you have, such as messages, receipts or an agreement?"
+          }
+        ],
+        "last_question": "What records do you have, such as messages, receipts or an agreement?",
+        "last_field": "evidence",
+        "provider_status": "Demo rules — no language model connected"
+      }
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "This prototype has not verified a law, deadline or entitlement for your agreement, state or employment arrangement. The draft is a factual request; ask a qualified lawyer about legal remedies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "rental",
+    "goal": "Request the deposit balance or a written deduction statement",
+    "facts": {
+      "summary": "My landlord will not return my deposit.",
+      "deposit": "30000",
+      "moved_out": "Moved out / keys returned as described by user",
+      "deductions": "₹1200",
+      "deduction_explanation": "Written deductions provided",
+      "landlord_message": "He emailed a written deduction of Rs 1200 for cleaning."
+    },
+    "evidence": [],
+    "allegations": [],
+    "notice_quotes": [],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 4,
+    "draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of 30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+    "draft_revision": 4,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Subject: Request for deposit reconciliation and return of balance\n\nDear [recipient],\n\nAccording to my records, I paid a deposit of 30000. Move-out/key-return status: Moved out / keys returned as described by user.\n\nRegarding the written deductions you provided, please share the basis and available receipts for each item, reconcile the deductions, and confirm the remaining balance. Deductions mentioned: ₹1200. Please also confirm the proposed date for returning the balance.\n\nRegards,\n[your name]",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My landlord will not return my deposit."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHow much deposit did you pay?"
+      },
+      {
+        "role": "user",
+        "content": "30000"
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHave you moved out and returned the keys?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, I moved out and returned keys."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nHas the landlord explained any deductions in writing?"
+      },
+      {
+        "role": "user",
+        "content": "He emailed a written deduction of Rs 1200 for cleaning."
+      },
+      {
+        "role": "assistant",
+        "content": "I have updated your case record.\n\nWhat records do you have, such as messages, receipts or an agreement?"
+      }
+    ],
+    "last_question": "What records do you have, such as messages, receipts or an agreement?",
+    "last_field": "evidence",
+    "provider_status": "Demo rules — no language model connected"
+  },
+  "total_elapsed_ms": 2.338,
+  "run_id": "20261121T131349321643Z",
+  "recorded_at_utc": "2026-11-21T13:13:49.321643+00:00",
+  "requested_provider": "demo"
+}

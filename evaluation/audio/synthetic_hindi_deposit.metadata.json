@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "original_text": "मेरे मकान मालिक ने बारह हज़ार रुपये की जमा राशि वापस नहीं की है। मेरे पास रसीद है।",
+  "generator": "Google Gemini TTS",
+  "model": "gemini-3.1-flash-tts-preview",
+  "voice": "Kore",
+  "created_at_utc": "2026-11-21T14:04:51.463590+00:00",
+  "audio_mime_received": "audio/l16; rate=24000; channels=1",
+  "sample_rate": 24000,
+  "duration_seconds": 6.8,
+  "generation_seconds": 5.374,
+  "usage": {
+    "promptTokenCount": 35,
+    "candidatesTokenCount": 170,
+    "totalTokenCount": 205,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 35
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "AUDIO",
+        "tokenCount": 170
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "purpose": "Original synthetic Hindi transcription test, not a real person or customer conversation"
+}

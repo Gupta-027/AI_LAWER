@@ -1,0 +1,279 @@
+{
+  "case_id": "notice_explicit_response_date",
+  "purpose": "An explicit response date is extracted from exact notice wording.",
+  "synthetic": true,
+  "holdout": false,
+  "events": [
+    {
+      "input": {
+        "action": "say",
+        "text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."
+      },
+      "output": "I’ll keep the sender’s allegations separate from your account. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending.",
+      "elapsed_ms": 9685.775,
+      "state_before": {
+        "kind": "other",
+        "goal": "",
+        "facts": {},
+        "evidence": [],
+        "allegations": [],
+        "notice_quotes": [],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 0,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Demo rules — no language model connected"
+      },
+      "state_after": {
+        "kind": "notice",
+        "goal": "Explain this legal notice without accepting its claims.",
+        "facts": {
+          "summary": "Our client alleges that you retained a rented camera.",
+          "notice_text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt.",
+          "user_account": "I say the camera was returned and have a receipt.",
+          "sender": "Cedar Legal Associates",
+          "requested_action": "Please respond by 15 October 2026.",
+          "response_date": "respond by 15 October 2026",
+          "notice_date": "2 October 2026",
+          "timeline": "Please respond by 15 October 2026."
+        },
+        "evidence": [
+          "receipt",
+          "I say the camera was returned and have a receipt."
+        ],
+        "allegations": [
+          "Our client alleges that you retained a rented camera."
+        ],
+        "notice_quotes": [
+          "Our client alleges that you retained a rented camera.",
+          "Please respond by 15 October 2026.",
+          "Return the camera or explain your position in writing.",
+          "respond by 15 October 2026"
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."
+          },
+          {
+            "role": "assistant",
+            "content": "I’ll keep the sender’s allegations separate from your account. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": "{\n  \"kind\": \"notice\",\n  \"goal\": \"Explain this legal notice without accepting its claims.\",\n  \"facts\": {\n    \"notice_date\": \"2 October 2026\",\n    \"sender\": \"Cedar Legal Associates\",\n    \"summary\": \"Our client alleges that you retained a rented camera.\",\n    \"timeline\": \"Please respond by 15 October 2026.\",\n    \"user_account\": \"I say the camera was returned and have a receipt.\"\n  },\n  \"evidence\": [\n    \"I say the camera was returned and have a receipt.\"\n  ],\n  \"allegations\": [\n    \"Our client alleges that you retained a rented camera.\"\n  ],\n  \"notice_quotes\": [\n    \"From: Cedar Legal Associates\",\n    \"Date: 2 October 2026\",\n    \"Our client alleges that you retained a rented camera.\",\n    \"Please respond by 15 October 2026.\",\n    \"Return the camera or explain your position in writing.\"\n  ]\n}",
+      "model_usage": {
+        "promptTokenCount": 383,
+        "candidatesTokenCount": 238,
+        "totalTokenCount": 621
+      }
+    },
+    {
+      "input": {
+        "action": "draft"
+      },
+      "output": "Lawyer review notes — review before sending any response\n\nSender: Cedar Legal Associates\nSender's allegations, not facts accepted by you:\n• Our client alleges that you retained a rented camera.\n\nRequested action (quoted): Please respond by 15 October 2026.\nResponse date actually written: respond by 15 October 2026\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+      "elapsed_ms": 0.082,
+      "state_before": {
+        "kind": "notice",
+        "goal": "Explain this legal notice without accepting its claims.",
+        "facts": {
+          "summary": "Our client alleges that you retained a rented camera.",
+          "notice_text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt.",
+          "user_account": "I say the camera was returned and have a receipt.",
+          "sender": "Cedar Legal Associates",
+          "requested_action": "Please respond by 15 October 2026.",
+          "response_date": "respond by 15 October 2026",
+          "notice_date": "2 October 2026",
+          "timeline": "Please respond by 15 October 2026."
+        },
+        "evidence": [
+          "receipt",
+          "I say the camera was returned and have a receipt."
+        ],
+        "allegations": [
+          "Our client alleges that you retained a rented camera."
+        ],
+        "notice_quotes": [
+          "Our client alleges that you retained a rented camera.",
+          "Please respond by 15 October 2026.",
+          "Return the camera or explain your position in writing.",
+          "respond by 15 October 2026"
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "",
+        "draft_revision": -1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."
+          },
+          {
+            "role": "assistant",
+            "content": "I’ll keep the sender’s allegations separate from your account. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "state_after": {
+        "kind": "notice",
+        "goal": "Explain this legal notice without accepting its claims.",
+        "facts": {
+          "summary": "Our client alleges that you retained a rented camera.",
+          "notice_text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt.",
+          "user_account": "I say the camera was returned and have a receipt.",
+          "sender": "Cedar Legal Associates",
+          "requested_action": "Please respond by 15 October 2026.",
+          "response_date": "respond by 15 October 2026",
+          "notice_date": "2 October 2026",
+          "timeline": "Please respond by 15 October 2026."
+        },
+        "evidence": [
+          "receipt",
+          "I say the camera was returned and have a receipt."
+        ],
+        "allegations": [
+          "Our client alleges that you retained a rented camera."
+        ],
+        "notice_quotes": [
+          "Our client alleges that you retained a rented camera.",
+          "Please respond by 15 October 2026.",
+          "Return the camera or explain your position in writing.",
+          "respond by 15 October 2026"
+        ],
+        "unknowns": [],
+        "skipped_fields": [],
+        "revision": 1,
+        "draft": "Lawyer review notes — review before sending any response\n\nSender: Cedar Legal Associates\nSender's allegations, not facts accepted by you:\n• Our client alleges that you retained a rented camera.\n\nRequested action (quoted): Please respond by 15 October 2026.\nResponse date actually written: respond by 15 October 2026\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+        "draft_revision": 1,
+        "manually_edited": false,
+        "pending_draft": null,
+        "generated_draft": "Lawyer review notes — review before sending any response\n\nSender: Cedar Legal Associates\nSender's allegations, not facts accepted by you:\n• Our client alleges that you retained a rented camera.\n\nRequested action (quoted): Please respond by 15 October 2026.\nResponse date actually written: respond by 15 October 2026\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+        "pending_generated_draft": null,
+        "conversation_language": "English",
+        "document_language": "English",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."
+          },
+          {
+            "role": "assistant",
+            "content": "I’ll keep the sender’s allegations separate from your account. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+          }
+        ],
+        "last_question": null,
+        "last_field": null,
+        "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+      },
+      "raw_model_text": null,
+      "model_usage": null
+    }
+  ],
+  "guidance": [
+    {
+      "text": "Keep a copy of your correspondence and the records you already have. Check every draft before sending; the app sends nothing.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "Get prompt review by a qualified lawyer, especially for court, police, criminal, eviction or hearing-related documents. The absence of a response date in the pasted text does not establish that no deadline applies.",
+      "source_id": null,
+      "claim_id": null
+    },
+    {
+      "text": "You can approach a State or District Legal Services Authority to ask about legal aid.",
+      "source_id": "nalsa_faq",
+      "claim_id": "nalsa_contact"
+    }
+  ],
+  "final_state": {
+    "kind": "notice",
+    "goal": "Explain this legal notice without accepting its claims.",
+    "facts": {
+      "summary": "Our client alleges that you retained a rented camera.",
+      "notice_text": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt.",
+      "user_account": "I say the camera was returned and have a receipt.",
+      "sender": "Cedar Legal Associates",
+      "requested_action": "Please respond by 15 October 2026.",
+      "response_date": "respond by 15 October 2026",
+      "notice_date": "2 October 2026",
+      "timeline": "Please respond by 15 October 2026."
+    },
+    "evidence": [
+      "receipt",
+      "I say the camera was returned and have a receipt."
+    ],
+    "allegations": [
+      "Our client alleges that you retained a rented camera."
+    ],
+    "notice_quotes": [
+      "Our client alleges that you retained a rented camera.",
+      "Please respond by 15 October 2026.",
+      "Return the camera or explain your position in writing.",
+      "respond by 15 October 2026"
+    ],
+    "unknowns": [],
+    "skipped_fields": [],
+    "revision": 1,
+    "draft": "Lawyer review notes — review before sending any response\n\nSender: Cedar Legal Associates\nSender's allegations, not facts accepted by you:\n• Our client alleges that you retained a rented camera.\n\nRequested action (quoted): Please respond by 15 October 2026.\nResponse date actually written: respond by 15 October 2026\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+    "draft_revision": 1,
+    "manually_edited": false,
+    "pending_draft": null,
+    "generated_draft": "Lawyer review notes — review before sending any response\n\nSender: Cedar Legal Associates\nSender's allegations, not facts accepted by you:\n• Our client alleges that you retained a rented camera.\n\nRequested action (quoted): Please respond by 15 October 2026.\nResponse date actually written: respond by 15 October 2026\n\nQuestions for a qualified lawyer: Is a response or appearance required, and by when? What records should I gather? Which allegations need checking?\n\nPossible factual request for review: Please provide the basis, account statement and documents supporting your claims. This draft makes no admission about the allegations.",
+    "pending_generated_draft": null,
+    "conversation_language": "English",
+    "document_language": "English",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Explain this legal notice without accepting its claims.\nFrom: Cedar Legal Associates\nDate: 2 October 2026\nOur client alleges that you retained a rented camera. Please respond by 15 October 2026. Return the camera or explain your position in writing.\nI say the camera was returned and have a receipt."
+      },
+      {
+        "role": "assistant",
+        "content": "I’ll keep the sender’s allegations separate from your account. A qualified lawyer should review a formal notice promptly.\n\nYou can prepare a factual draft now. Missing details will appear in brackets; review them before sending."
+      }
+    ],
+    "last_question": null,
+    "last_field": null,
+    "provider_status": "Live model extraction connected; Gemini facts checked against your words"
+  },
+  "total_elapsed_ms": 9686.38,
+  "run_id": "20261121T140205149688Z",
+  "recorded_at_utc": "2026-11-21T14:02:05.149688+00:00",
+  "requested_provider": "gemini"
+}
